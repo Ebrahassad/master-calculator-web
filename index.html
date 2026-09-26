@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master Calculator Web | موسوعة الحاسبات الشاملة</title>
+<meta name="description" content="Master Calculator Web — حاسبة علمية وتحويلات للعملات والوحدات وحاسبات مالية وصحية، تعمل مباشرة في متصفحك. تطبيق Master Calculator متاح بشكل منفصل عبر صفحة التحميل.">
+<meta name="keywords" content="حاسبة علمية, حاسبة اونلاين, حاسبة ويب, تحويل العملات, تحويل الوحدات, حاسبة مالية, حاسبة صحية, master calculator, master calculator web, online calculator, scientific calculator">
+<meta name="author" content="HASSADI">
+<link rel="canonical" href="https://ebrahassad.github.io/master-calculator-web/">
+
+<!-- Open Graph / Facebook / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ebrahassad.github.io/master-calculator-web/">
+<meta property="og:title" content="موسوعة الحاسبات الشاملة | Master Calculator Hub">
+<meta property="og:description" content="حاسبة علمية، تحويلات فورية للعملات والوحدات، حاسبات مالية وصحية — كل ما تحتاجه في مكان واحد.">
+<meta property="og:image" content="https://ebrahassad.github.io/master-calculator-web/assets/og-image.jpg">
+<meta property="og:locale" content="ar_AR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Master Calculator Web | موسوعة الحاسبات الشاملة">
+<meta name="twitter:description" content="Master Calculator Web — حاسبة علمية وتحويلات للعملات والوحدات وحاسبات مالية وصحية تعمل مباشرة في متصفحك.">
+<meta name="twitter:image" content="https://ebrahassad.github.io/master-calculator-web/assets/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/app_icon_192.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<!-- Web advertising is intentionally disabled for now. -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Master Calculator Hub",
+  "operatingSystem": "ANDROID",
+  "applicationCategory": "UtilitiesApplication",
+  "description": "حاسبة علمية شاملة، تحويلات فورية للعملات والوحدات، حاسبات مالية وصحية.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "HASSADI" }
+}
+</script>
+</head>
+<body dir="rtl">
+
+<div class="math-bg" id="math-bg" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <img src="assets/app_icon_192.png" alt="Master Calculator Hub logo">
+      <span>Master Calculator</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#features" data-i18n="nav_features">المزايا</a>
+      <a href="#demo" data-i18n="nav_demo">جرّبها الآن</a>
+      <a href="#download" data-i18n="nav_download">تحميل</a>
+    </nav>
+    <div class="top-actions">
+      <button class="lang-btn" id="lang-toggle" aria-label="Toggle language">
+        🌐 <span id="lang-btn-label">EN</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- ===== الهيرو ===== -->
+  <section class="hero">
+    <div class="container">
+      <img src="assets/app_icon_192.png" class="hero-icon" alt="Master Calculator Hub icon">
+      <h1 data-i18n="hero_title">موسوعة الحاسبات الشاملة</h1>
+      <p class="subtitle" data-i18n="hero_sub">حاسبة علمية، تحويلات فورية للعملات والوحدات، حاسبات مالية وصحية — كل ما تحتاجه في مكان واحد.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://ebrahassad.github.io/master-calculator-site/" id="download-btn-hero" target="_blank" rel="noopener">
+          ⬇️ <span data-i18n="hero_cta_download">حمّل التطبيق</span>
+        </a>
+        <a class="btn btn-secondary" href="#demo" data-i18n="hero_cta_demo">جرّب في المتصفح</a>
+      </div>
+      <div class="hero-badges">
+        <span data-i18n="badge_free">✅ مجاني بالكامل</span>
+        <span data-i18n="badge_offline">📶 يعمل بدون إنترنت</span>
+        <span data-i18n="badge_bilingual">🌍 عربي / إنجليزي</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- مساحة إعلانية 1 -->
+  <div class="ad-slot">
+    <div class="ad-inner" data-i18n="ad_placeholder">
+      <!-- Reserved for a future independent web advertising provider. -->
+      مساحة إعلانية
+    </div>
+  </div>
+
+  <!-- ===== المزايا ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title" data-i18n="features_title">كل الحاسبات التي تحتاجها</h2>
+      <p class="section-sub" data-i18n="features_sub">خمس فئات متكاملة في تطبيق واحد أنيق وسريع</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(45,212,191,0.15)">🧮</div>
+          <h3 data-i18n="f_scientific_t">الحاسبة العلمية</h3>
+          <p data-i18n="f_scientific_d">دوال مثلثية، لوغاريتمات، أسس وجذور، مع وضع درجات/راديان وسجل عمليات.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(59,130,246,0.15)">🔄</div>
+          <h3 data-i18n="f_convert_t">التحويلات</h3>
+          <p data-i18n="f_convert_d">13 فئة وحدات + أكثر من 80 عملة عالمية وعربية بأسعار صرف لحظية.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(236,72,153,0.15)">❤️</div>
+          <h3 data-i18n="f_health_t">الصحة</h3>
+          <p data-i18n="f_health_d">مؤشر كتلة الجسم، السعرات اليومية، الوزن المثالي، نسبة الدهون وغيرها.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(251,146,60,0.15)">📊</div>
+          <h3 data-i18n="f_calc_t">الحسابات العامة</h3>
+          <p data-i18n="f_calc_d">الخصم، الإكرامية، العمر التفصيلي، فرق التواريخ، والمعدل التراكمي.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(74,222,128,0.15)">💰</div>
+          <h3 data-i18n="f_finance_t">إدارة المال</h3>
+          <p data-i18n="f_finance_d">القروض، الفائدة المركبة، هامش الربح، نقطة التعادل، وهدف الادخار.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background:rgba(168,85,247,0.15)">📝</div>
+          <h3 data-i18n="f_notes_t">ملاحظات محفوظة</h3>
+          <p data-i18n="f_notes_d">دوّن ملاحظات حساباتك واحفظها بشكل دائم على جهازك، وشاركها متى شئت.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== التجربة الحية ===== -->
+  <section class="demo" id="demo">
+    <div class="container">
+      <h2 class="section-title" data-i18n="demo_title">جرّبها الآن مباشرة</h2>
+      <p class="section-sub" data-i18n="demo_sub">نموذج مصغّر يعمل مباشرة في متصفحك — بدون تحميل</p>
+      <div class="demo-wrap">
+        <div class="demo-card">
+          <h3>🧮 <span data-i18n="demo_calc_title">حاسبة علمية</span></h3>
+          <div class="calc-display" id="calc-display">0</div>
+          <div class="calc-grid" id="calc-grid">
+            <button data-key="AC">C</button>
+            <button data-key="(">(</button>
+            <button data-key=")">)</button>
+            <button data-key="DEL">⌫</button>
+            <button class="fn" data-key="sin(">sin</button>
+            <button class="fn" data-key="cos(">cos</button>
+            <button class="fn" data-key="tan(">tan</button>
+            <button class="op" data-key="÷">÷</button>
+            <button data-key="7">7</button>
+            <button data-key="8">8</button>
+            <button data-key="9">9</button>
+            <button class="op" data-key="×">×</button>
+            <button data-key="4">4</button>
+            <button data-key="5">5</button>
+            <button data-key="6">6</button>
+            <button class="op" data-key="−">−</button>
+            <button data-key="1">1</button>
+            <button data-key="2">2</button>
+            <button data-key="3">3</button>
+            <button class="op" data-key="+">+</button>
+            <button class="fn" data-key="√(">√</button>
+            <button data-key="0">0</button>
+            <button data-key=".">.</button>
+            <button class="eq" data-key="=">=</button>
+          </div>
+        </div>
+        <div class="demo-card">
+          <h3>💱 <span data-i18n="demo_conv_title">محوّل العملات اللحظي</span></h3>
+          <input type="number" id="conv-amount" value="1" style="width:100%;margin-bottom:14px;background:#06070a;border:1px solid var(--card-border);color:var(--text);padding:12px;border-radius:10px;font-size:1rem;">
+          <div class="conv-row">
+            <select id="conv-from"></select>
+            <button class="conv-swap" id="conv-swap">⇄</button>
+            <select id="conv-to"></select>
+          </div>
+          <div class="conv-result" id="conv-result">—</div>
+          <p class="conv-meta" id="conv-status" data-i18n="conv_fetching">جاري جلب الأسعار اللحظية...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- مساحة إعلانية 2 -->
+  <div class="ad-slot">
+    <div class="ad-inner" data-i18n="ad_placeholder">
+      <!-- Reserved for a future independent web advertising provider. -->
+      مساحة إعلانية
+    </div>
+  </div>
+
+  <!-- ===== التحميل ===== -->
+  <section class="download" id="download">
+    <div class="container">
+      <h2 class="section-title" data-i18n="download_title">حمّل التطبيق الآن</h2>
+      <p class="section-sub" data-i18n="download_sub">متوفر لأجهزة أندرويد — مجانًا بالكامل</p>
+      <a class="btn btn-primary" href="https://ebrahassad.github.io/master-calculator-site/" id="download-btn-main" target="_blank" rel="noopener">
+        ⬇️ <span data-i18n="hero_cta_download">حمّل التطبيق</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <a class="dev-credit" href="https://ebrahassad.github.io/Hassadi-Apps/#apps" target="_blank" rel="noopener">
+      <img src="assets/hr_icon_160.png" alt="HASSADI">
+      <span data-i18n="footer_dev">تطوير: HASSADI</span>
+    </a>
+    <p class="footer-copy" data-i18n="footer_rights">© 2026 جميع الحقوق محفوظة</p>
+    <div class="footer-links">
+      <a href="https://ebrahassad.github.io/Hassadi-Apps/#apps" target="_blank" rel="noopener">Hassadi Apps</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
