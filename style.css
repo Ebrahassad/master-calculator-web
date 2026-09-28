@@ -343,3 +343,37 @@ footer {
 .footer-links a:hover { color: var(--teal); }
 
 [data-i18n], [data-i18n-placeholder] { transition: opacity .15s; }
+
+/* ===== بطاقات المزايا القابلة للنقر ===== */
+a.feature-card { display: block; color: inherit; cursor: pointer; text-decoration: none; }
+a.feature-card:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+.feature-go { display: inline-block; margin-top: 12px; color: var(--teal); font-size: 0.85rem; font-weight: 600; }
+
+/* ===== قسم الأدوات ===== */
+.tools { padding: 70px 24px; scroll-margin-top: 70px; }
+.tools-card { background: var(--card); border: 1px solid var(--card-border); border-radius: var(--radius); padding: 22px; max-width: 760px; margin: 0 auto; }
+.tools-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.tool-tab { background: #06070a; color: var(--text-dim); border: 1px solid var(--card-border); padding: 9px 16px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; transition: all .15s; }
+.tool-tab:hover { color: var(--text); border-color: var(--teal); }
+.tool-tab.active { background: linear-gradient(135deg, var(--teal), var(--blue)); color: #062024; border-color: transparent; }
+.tool-field { display: block; margin-bottom: 14px; }
+.tool-field > span { display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 6px; }
+.tool-field input, .tool-field select, .tools-card .conv-row select, .tools-card > div > .conv-row input, .note-text {
+  width: 100%; background: #06070a; border: 1px solid var(--card-border); color: var(--text);
+  padding: 12px; border-radius: 10px; font-size: 1rem; font-family: inherit; }
+.tool-field input:focus, .tool-field select:focus, .note-text:focus { outline: none; border-color: var(--teal); }
+.tool-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0 14px; }
+.tool-results { margin-top: 8px; display: grid; gap: 10px; }
+.tool-result { display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #06070a; border: 1px solid var(--card-border); border-radius: 12px; padding: 14px 16px; }
+.tool-result span { color: var(--text-dim); font-size: 0.92rem; }
+.tool-result strong { color: var(--teal); font-size: 1.15rem; text-align: end; }
+.note-text { resize: vertical; margin-bottom: 12px; }
+.note-save { width: 100%; justify-content: center; }
+.note-list { margin-top: 18px; display: grid; gap: 12px; }
+.note-item { background: #06070a; border: 1px solid var(--card-border); border-radius: 12px; padding: 14px; }
+.note-item small { color: var(--teal); }
+.note-item p { margin: 8px 0; white-space: pre-wrap; word-break: break-word; }
+.note-actions { display: flex; gap: 10px; }
+.note-actions button { background: var(--card); color: var(--text); border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 12px; font-size: 0.82rem; }
+.note-actions button:hover { border-color: var(--teal); }
+.note-empty { text-align: center; color: var(--text-dim); }

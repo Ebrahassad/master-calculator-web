@@ -6,6 +6,9 @@
 const STRINGS = {
   nav_features: { ar: 'المزايا', en: 'Features' },
   nav_demo: { ar: 'جرّبها الآن', en: 'Live Demo' },
+  nav_tools: { ar: 'الأدوات', en: 'Tools' },
+  tools_title: { ar: 'كل الحاسبات في مكان واحد', en: 'All calculators in one place' },
+  tools_sub: { ar: 'الصحة، المال، الحسابات العامة، تحويل الوحدات والملاحظات — تعمل مباشرة هنا', en: 'Health, finance, general calculations, unit conversion and notes — working right here' },
   nav_download: { ar: 'تحميل', en: 'Download' },
   hero_title: { ar: 'موسوعة الحاسبات الشاملة', en: 'Master Calculator Hub' },
   hero_sub: {
