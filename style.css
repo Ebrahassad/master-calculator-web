@@ -377,3 +377,13 @@ a.feature-card:focus-visible { outline: 2px solid var(--teal); outline-offset: 3
 .note-actions button { background: var(--card); color: var(--text); border: 1px solid var(--card-border); border-radius: 8px; padding: 6px 12px; font-size: 0.82rem; }
 .note-actions button:hover { border-color: var(--teal); }
 .note-empty { text-align: center; color: var(--text-dim); }
+
+/* محوّل الوحدات: حقلا "من/إلى" بعرض كامل على الجوال لتظهر أسماء الوحدات كاملة */
+.tools-card .conv-row { flex-direction: column; gap: 10px; }
+.tools-card .conv-row select { width: 100%; flex: none; }
+.tools-card .conv-swap { width: 100%; height: 42px; }
+@media (min-width: 640px) {
+  .tools-card .conv-row { flex-direction: row; }
+  .tools-card .conv-row select { flex: 1; width: auto; }
+  .tools-card .conv-swap { width: 46px; height: auto; }
+}
