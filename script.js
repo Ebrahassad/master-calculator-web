@@ -17,9 +17,9 @@ const STRINGS = {
   },
   hero_cta_download: { ar: 'حمّل التطبيق', en: 'Download the App' },
   hero_cta_demo: { ar: 'جرّب في المتصفح', en: 'Try in Browser' },
-  badge_free: { ar: 'مجاني بالكامل', en: '100% Free' },
-  badge_offline: { ar: 'يعمل بدون إنترنت', en: 'Works Offline' },
-  badge_bilingual: { ar: 'عربي / إنجليزي', en: 'Arabic / English' },
+  badge_free: { ar: '✅ مجاني بالكامل', en: '✅ 100% Free' },
+  badge_offline: { ar: '📶 يعمل بدون إنترنت', en: '📶 Works Offline' },
+  badge_bilingual: { ar: '🌍 عربي / إنجليزي', en: '🌍 Arabic / English' },
   features_title: { ar: 'كل الحاسبات التي تحتاجها', en: 'Every calculator you need' },
   features_sub: { ar: 'خمس فئات متكاملة في تطبيق واحد أنيق وسريع', en: 'Five complete categories in one fast, elegant app' },
   f_scientific_t: { ar: 'الحاسبة العلمية', en: 'Scientific Calculator' },
@@ -61,6 +61,7 @@ function applyLang(lang) {
   });
   const langBtnLabel = document.getElementById('lang-btn-label');
   if (langBtnLabel) langBtnLabel.textContent = lang === 'ar' ? 'EN' : 'AR';
+  if (typeof window.refreshConvStatus === 'function') window.refreshConvStatus();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -255,19 +256,22 @@ async function initConverter() {
   toEl.value = 'LYD';
 
   let rates = null;
-  statusEl.textContent = STRINGS.conv_fetching[currentLang];
+  let statusKey = 'conv_fetching';
+  const setStatus = (k) => { statusKey = k; statusEl.textContent = STRINGS[k][currentLang]; };
+  window.refreshConvStatus = () => setStatus(statusKey);
+  setStatus('conv_fetching');
 
   try {
     const res = await fetch('https://open.er-api.com/v6/latest/USD');
     const data = await res.json();
     if (data.result === 'success') {
       rates = data.rates;
-      statusEl.textContent = STRINGS.conv_updated[currentLang];
+      setStatus('conv_updated');
     } else {
       throw new Error('bad_response');
     }
   } catch (e) {
-    statusEl.textContent = STRINGS.conv_offline[currentLang];
+    setStatus('conv_offline');
     // أسعار احتياطية تقريبية إن تعذر الاتصال
     rates = { USD: 1, EUR: 0.92, GBP: 0.78, LYD: 4.85, SAR: 3.75, AED: 3.67, EGP: 48.5, KWD: 0.31, QAR: 3.64, TRY: 34, CNY: 7.2, JPY: 152 };
   }
